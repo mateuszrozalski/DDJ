@@ -13,6 +13,14 @@
 
 })();
 
-let link = document.querySelectorAll('a[href="'+document.URL+'"]');
-link.classList += " lol"
-console.log(link)
+
+// Set current link in menu to active
+let nav = document.getElementsByClassName('menu-list'),
+anchor = document.querySelectorAll( 'a' )
+current = window.location.pathname.split('/')[1]
+  for (var i = 0; i < anchor.length; i++) {
+    if(anchor[i].getAttribute('href') == current) {
+        anchor[i].classList.add('is-active')
+        console.log(anchor)
+    }
+}
