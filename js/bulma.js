@@ -9,13 +9,10 @@
         menu.classList.toggle('is-hidden-mobile');
         menu.classList.toggle('mobile-menu');
     });
-    for (i = 0; i < menuItem.length; i++) {
-      menuItem[i].addEventListener('click', function() {
-          console.log('lol')
-          burger.classList.toggle('is-active');
-          menu.classList.toggle('is-hidden-mobile');
-          menu.classList.toggle('mobile-menu');
-      });
-    }
+
 
 })();
+
+let link = document.querySelectorAll('a[href="'+document.URL+'"]');
+link.classList += " lol"
+console.log(link)
