@@ -5,14 +5,17 @@ html, body
   font-size: 16px
   line-height: 1.5
   height: 100%
+  border-top: 4px solid #276cda
+.container
+  width: 95vw
 @media screen and (min-width: 1408px)
   .container
     max-width: 80vw
     width: 80vw
 .navbar
-  border-top: 4px solid #276cda
   margin-bottom: 2rem
-
+  .navbar-brand
+    margin-left: 0 !important
 .navbar-item
   &.brand-text
     font-weight: 600
@@ -25,7 +28,33 @@ html, body
   font-size: 14px
   font-weight: 700
 
+.burger
+  z-index: 3
 
+@media screen and (max-width: 769px)
+  .mobile-menu
+    position: fixed
+    top: 0
+    left: 0
+    padding: 50px 0 50px 0 !important
+    background: white
+    z-index: 1
+    width: 100vw
+    height: 100vh
+    display: flex
+    overflow: scroll
+    justify-content: center
+    text-align: center
+    .menu-list
+      margin-bottom: 50px
+      .menu-label
+        padding-top: 50px
+      li
+        padding-top: 2em
+        ul
+          border-left: 1px solid rgb(208, 208, 208)
+          border-right: 1px solid rgb(208, 208, 208)
+          padding: 0 20px 0 20px
 
 .menu-label
   color: #8F99A3
